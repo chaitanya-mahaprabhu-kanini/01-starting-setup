@@ -3,20 +3,6 @@ import { NewExpense } from "./components/NewExpense/NewExpense";
 import { useState } from "react";
 
 const DUMMY_EXPENSES = [
-  { id: "e1", title: "Novel", amount: 94.12, date: new Date(2019, 0, 14) },
-  { id: "e2", title: "New TV", amount: 799.49, date: new Date(2019, 4, 12) },
-  {
-    id: "e3",
-    title: "Car Insurance",
-    amount: 294.67,
-    date: new Date(2019, 8, 28),
-  },
-  {
-    id: "e4",
-    title: "New Desk (Wooden)",
-    amount: 450,
-    date: new Date(2019, 11, 12),
-  },
   { id: "e5", title: "Headphones", amount: 89.99, date: new Date(2020, 2, 2) },
   { id: "e6", title: "Groceries", amount: 150.75, date: new Date(2020, 5, 18) },
   {
