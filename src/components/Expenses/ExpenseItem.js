@@ -13,7 +13,7 @@ const ExpenseItem = (props) => {
       <ExpenseDate date={expenseDate}></ExpenseDate>
       <div className="expense-item__description">
         <h2>{expenseTitle}</h2>
-        <div className="expense-item__price">{expenseAmount}</div>
+        <div className="expense-item__price">₹{expenseAmount}</div>
       </div>
     </Card>
   );
