@@ -1,0 +1,27 @@
+.contact{
+    background-color: rebeccapurple;
+    margin: 2rem;
+    height: 10rem;
+    text-align: center;
+    padding-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+#email{
+    font-size: 1.5rem;
+    color:gold;
+    transition: all 0.5s ease-in;
+}
+
+#email:hover{
+    font-size: 3rem;
+}

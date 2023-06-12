@@ -1,6 +1,10 @@
 import { Expenses } from "./components/Expenses/Expenses";
 import { NewExpense } from "./components/NewExpense/NewExpense";
 import { useState } from "react";
+import {Route, Routes} from 'react-router-dom';
+import {NavBar} from './components/Navbar/NavBar';
+import {About} from './components/Navbar/About';
+import {Contact} from './components/Navbar/Contact';
 
 const DUMMY_EXPENSES = [
   { id: "e5", title: "Headphones", amount: 89.99, date: new Date(2020, 2, 2) },
@@ -76,17 +80,35 @@ const DUMMY_EXPENSES = [
   },
 ];
 
-const App = () => {
+const Tracker = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   const addExpenseHandler = (expense) => {
     setExpenses((prev) => {
       return [expense, ...prev];
     });
   };
-  return (
-    <div>
+
+  return(
+  <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses}></Expenses>
+    </div>
+  );
+};
+
+const App = () => {
+  const router_logic = 
+    <Routes>
+    <Route path = "/about" element = {<About/>}>About</Route>
+    <Route path = "/expensetracker" element = {<Tracker/>}>ExpenseTracker</Route>
+    <Route path = "/contact" element = {<Contact/>}>Contact</Route>
+    </Routes>
+  ;
+  
+  return (
+    <div>
+    <NavBar />
+    {router_logic}
     </div>
   );
 };
