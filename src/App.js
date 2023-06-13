@@ -5,6 +5,7 @@ import {Route, Routes} from 'react-router-dom';
 import {NavBar} from './components/Navbar/NavBar';
 import {About} from './components/Navbar/About';
 import {Contact} from './components/Navbar/Contact';
+import { NotFound } from "./components/Navbar/NotFound";
 
 const DUMMY_EXPENSES = [
   { id: "e5", title: "Headphones", amount: 89.99, date: new Date(2020, 2, 2) },
@@ -100,8 +101,9 @@ const App = () => {
   const router_logic = 
     <Routes>
     <Route path = "/about" element = {<About/>}>About</Route>
-    <Route path = "/expensetracker" element = {<Tracker/>}>ExpenseTracker</Route>
+    <Route path = "/" element = {<Tracker/>}>ExpenseTracker</Route>
     <Route path = "/contact" element = {<Contact/>}>Contact</Route>
+    <Route path = "*" element = {<NotFound/>}/>
     </Routes>
   ;
   

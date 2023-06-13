@@ -6,7 +6,7 @@ const NavBar = (props) => {
     <div>
       <ul>
         <li>
-          <Link to="/expensetracker">Expense Tracker</Link>
+          <Link to="/">Expense Tracker</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
